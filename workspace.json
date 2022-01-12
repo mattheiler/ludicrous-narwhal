@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
-    "api": "apps/api"
+    "api": "apps/api",
+    "auto": "apps/auto",
+    "core": "libs/core",
+    "infrastructure": "libs/infrastructure"
   }
 }
