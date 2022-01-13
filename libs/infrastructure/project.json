@@ -3,6 +3,17 @@
   "sourceRoot": "libs/infrastructure/src",
   "projectType": "library",
   "targets": {
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/infrastructure",
+        "tsConfig": "libs/infrastructure/tsconfig.lib.json",
+        "packageJson": "libs/infrastructure/package.json",
+        "main": "libs/infrastructure/src/index.ts",
+        "assets": ["libs/infrastructure/*.md"]
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
