@@ -22,12 +22,6 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": [
-                  "*"
-                ]
-              },
-              {
                 "sourceTag": "scope:presentation",
                 "onlyDependOnLibsWithTags": [
                   "scope:application",
@@ -38,20 +32,11 @@
                 "sourceTag": "scope:infrastructure",
                 "onlyDependOnLibsWithTags": [
                   "scope:application"
-                ],
-                "allow": [
-                  "@nestegg/*"
                 ]
               },
               {
                 "sourceTag": "scope:application",
-                "onlyDependOnLibsWithTags": [],
-                "allow": [
-                  "@nestegg/core",
-                  "@nestjs/common",
-                  "@nestjs/core",                  
-                  "typeorm"
-                ]
+                "onlyDependOnLibsWithTags": []
               }
             ]
           }
