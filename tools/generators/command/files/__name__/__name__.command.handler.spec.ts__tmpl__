@@ -1,0 +1,19 @@
+import { Test, TestingModule } from '@nestjs/testing';
+
+import { <%= className %>CommandHandler } from "./<%= name %>.command.handler";
+
+describe('<%= className %>CommandHandler', () => {
+  let handler: <%= className %>CommandHandler;
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      providers: [],
+    }).compile();
+
+    handler = module.get(<%= className %>CommandHandler);
+  });
+
+  it('should be defined', () => {
+    expect(handler).toBeDefined();
+  });
+});

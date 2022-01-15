@@ -38,9 +38,9 @@
           {
             "message": "Unapproved imports are not allowed.",
             "group": [
-              "[a-zA-Z]*",
-              "!./*",
-              "!../*",
+              "[a-zA-Z0-9]*",
+              "!./**",
+              "!../**",
               "!@nestegg/core",
               "!@nestjs/common",
               "!@nestjs/core",

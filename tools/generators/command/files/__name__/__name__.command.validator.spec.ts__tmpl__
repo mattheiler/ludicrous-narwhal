@@ -1,0 +1,19 @@
+import { Test, TestingModule } from '@nestjs/testing';
+
+import { <%= className %>CommandValidator } from "./<%= name %>.command.validator";
+
+describe('<%= className %>CommandValidator', () => {
+  let validator: <%= className %>CommandValidator;
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      providers: [],
+    }).compile();
+
+    validator = module.get(<%= className %>CommandValidator);
+  });
+
+  it('should be defined', () => {
+    expect(validator).toBeDefined();
+  });
+});

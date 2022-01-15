@@ -1,0 +1,19 @@
+import { Test, TestingModule } from '@nestjs/testing';
+
+import { <%= className %>QueryHandler } from "./<%= name %>.query.handler";
+
+describe('<%= className %>QueryHandler', () => {
+  let handler: <%= className %>QueryHandler;
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      providers: [],
+    }).compile();
+
+    handler = module.get(<%= className %>QueryHandler);
+  });
+
+  it('should be defined', () => {
+    expect(handler).toBeDefined();
+  });
+});

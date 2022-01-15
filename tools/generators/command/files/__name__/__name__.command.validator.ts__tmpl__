@@ -1,9 +1,11 @@
+import { Validate } from '@nestegg/core';
 import { JoiValidator } from "@nestegg/joi";
 
 import { <%= className %>Command } from "./<%= name %>.command";
 
+@Validate(<%= className %>Command)
 export class <%= className %>CommandValidator extends JoiValidator<<%= className %>Command> {
-    validate(context:<%= className %>Command): Promise<void> {
+    validate(context: <%= className %>Command): Promise<void> {
         throw new Error("Method not implemented.");
     }
 } 
